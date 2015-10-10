@@ -1,0 +1,89 @@
+/*
+ *= depend_on semantic_ui/theme.config
+ *= depend_on semantic_ui/config/globals/reset.overrides
+ *= depend_on semantic_ui/config/globals/reset.variables
+ *= depend_on semantic_ui/config/globals/site.overrides
+ *= depend_on semantic_ui/config/globals/site.variables
+ *= depend_on semantic_ui/config/modules/transition.overrides
+ *= depend_on semantic_ui/config/modules/transition.variables
+ */
+
+/*!
+ * # Semantic UI - Transition
+ * http://github.com/semantic-org/semantic-ui/
+ *
+ *
+ * Copyright 2015 Contributors
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+
+
+/*******************************
+            Theme
+*******************************/
+
+@type    : 'module';
+@element : 'transition';
+
+@import (multiple) 'semantic_ui/theme.config';
+
+/*******************************
+          Transitions
+*******************************/
+
+.transition {
+  animation-iteration-count: 1;
+  animation-duration: @transitionDefaultDuration;
+  animation-timing-function: @transitionDefaultEasing;
+  animation-fill-mode: @transitionDefaultFill;
+}
+
+/*******************************
+            States
+*******************************/
+
+
+/* Animating */
+.animating.transition {
+  backface-visibility: @backfaceVisibility;
+  visibility: visible !important;
+}
+
+/* Loading */
+.loading.transition {
+  position: absolute;
+  top: -99999px;
+  left: -99999px;
+}
+
+/* Hidden */
+.hidden.transition {
+  display: none;
+  visibility: hidden;
+}
+
+/* Visible */
+.visible.transition {
+  display: block !important;
+  visibility: visible !important;
+/*  backface-visibility: @backfaceVisibility;
+  transform: @use3DAcceleration;*/
+}
+
+/* Disabled */
+.disabled.transition {
+  animation-play-state: paused;
+}
+
+/*******************************
+          Variations
+*******************************/
+
+.looping.transition {
+  animation-iteration-count: infinite;
+}
+
+
+.loadUIOverrides();

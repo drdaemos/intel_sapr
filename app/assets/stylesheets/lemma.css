@@ -1,0 +1,16 @@
+/*
+  Place all the styles related to the matching controller here.
+  They will automatically be included in application.css.
+*/
+textarea.full-width {
+	width: 100%;
+}
+
+.debug_dump {
+	overflow: scroll;
+	height: 300px;
+}
+
+h1.ui.center.header{
+	margin-top: 1em;
+}

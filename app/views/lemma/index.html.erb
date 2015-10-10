@@ -1,0 +1,6 @@
+<h1>Lemma#index</h1>
+<%= form_tag("/result", method: "post") do %>
+  <%= label_tag(:text, "Input text:") %>
+  <%= text_area_tag(:text, "", size: "24x6") %>
+  <%= submit_tag("Lemmatize") %>
+<% end %>

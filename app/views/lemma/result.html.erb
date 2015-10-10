@@ -1,0 +1,26 @@
+<h1 class="ui center aligned header">IntelliSAPR</h1>
+<div class='ui two column stackable grid'>
+	<div class='sixteen wide column'>
+		<h2>Raw input</h2>
+		<%= form_tag("/", method: "post", class: "ui form") do %>
+  			<div class="field">
+		  		<textarea name='text' class='full-width' rows='10'><%= @data['input'] %></textarea>
+		  	</div>
+		  	<button class="ui primary button" type="submit" >Lemmatize</button>
+		<% end %>
+	</div>
+
+	<div class='four wide column'>
+		<h2>Analysis</h2>
+		<% @stats.each do |label, stat| %>
+			<p><%= label %>: <%= stat %></p>
+		<% end %>
+	</div>
+
+	<div class='twelve wide column'>
+		<h2>Raw output</h2>
+		<p><%= @data['lemmatized'] %></p>
+		<%= debug(@data['processed']) %>
+	</div>
+
+</div>

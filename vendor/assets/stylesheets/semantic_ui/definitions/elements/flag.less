@@ -1,0 +1,63 @@
+/*
+ *= depend_on semantic_ui/theme.config
+ *= depend_on semantic_ui/config/globals/reset.overrides
+ *= depend_on semantic_ui/config/globals/reset.variables
+ *= depend_on semantic_ui/config/globals/site.overrides
+ *= depend_on semantic_ui/config/globals/site.variables
+ *= depend_on semantic_ui/config/elements/flag.overrides
+ *= depend_on semantic_ui/config/elements/flag.variables
+ */
+
+/*!
+ * # Semantic UI - Flag
+ * http://github.com/semantic-org/semantic-ui/
+ *
+ *
+ * Copyright 2015 Contributors
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+
+
+/*******************************
+            Theme
+*******************************/
+
+@type    : 'element';
+@element : 'flag';
+
+@import (multiple) 'semantic_ui/theme.config';
+
+
+/*******************************
+             Flag
+*******************************/
+
+i.flag:not(.icon) {
+  display: inline-block;
+
+  width: @width;
+  height: @height;
+
+  line-height: @height;
+  vertical-align: @verticalAlign;
+  margin: 0em @margin 0em 0em;
+
+  text-decoration: inherit;
+
+  speak: none;
+  font-smoothing: antialiased;
+  backface-visibility: hidden;
+}
+
+/* Sprite */
+i.flag:not(.icon):before {
+  display: inline-block;
+  content: '';
+  background: asset-url(@spritePath) no-repeat 0px 0px;
+  width: @width;
+  height: @height;
+}
+
+.loadUIOverrides();
