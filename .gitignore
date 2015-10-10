@@ -18,7 +18,6 @@ config/secrets.yml
 
 ## Environment normalisation:
 /.bundle
-/vendor
 /vendor/bundle
 
 # these should all be checked in to normalise the environment:
