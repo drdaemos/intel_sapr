@@ -12,6 +12,16 @@ class TextsController < ApplicationController
 		render json: text
 	end
 
+	# POST /texts/analyze/:id
+	def analyze
+		id = params[:id]
+		text = Text.find(id)
+		analyzer = TextAnalyzer.new
+		analyzer.analyze(text)
+		render json: {:result => 'success'}
+	end
+
+	# POST /texts/
 	def create
 		text = params[:text]
 		text.permit!

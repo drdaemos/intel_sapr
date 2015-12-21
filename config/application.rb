@@ -7,6 +7,12 @@ require 'rails/all'
 Bundler.require(*Rails.groups)
 
 module IntelSapr
+  def self.setLogger(object)
+    @@logger = object
+  end
+  def self.logger
+    @@logger
+  end
   class Application < Rails::Application
     config.middleware.insert_before 0, "Rack::Cors" do
         allow do
@@ -14,6 +20,9 @@ module IntelSapr
             resource '*', :headers => :any, :methods => [:get, :post, :options]
         end
     end
+
+    config.autoload_paths += Dir[Rails.root.join('app', 'actions', '{**/}')]
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
