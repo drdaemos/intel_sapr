@@ -39,6 +39,13 @@ gem 'active_model_serializers'
 gem 'carrierwave'
 gem 'rack-cors', :require => 'rack/cors'
 
+# Summarize
+gem 'epitome'
+gem 'graph-rank'
+gem 'tf-idf-similarity'
+gem 'yomu'
+gem 'bloom-filter'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

@@ -1,11 +1,23 @@
 require 'yaml'
+require 'bloom-filter'
+
 class MorphologicStep < AnalysisStep
 	STEP_GROUP = 'morphologic'
-	attr_reader :data, :stoplist, :text
+	attr_reader :data, :filter, :text
 	def initialize (data, text)
 		@data = data
 		@text = text
-		@stoplist = Global.resources.stoplist
+		cache = Rails.root.join('tmp', 'stoplist.bloom')
+
+		if File.exists? cache
+			@filter = BloomFilter.load cache
+		else
+			@filter = BloomFilter.new size: Global.resources.stoplist.count
+			Global.resources.stoplist.each {
+				|word| @filter.insert word
+			}
+			@filter.dump cache
+		end
 	end
 
 	def proceed!
@@ -22,7 +34,7 @@ private
 	  	out, status = Open3.capture2(command, :stdin_data => input)
 		processed = out.lines.map { |e| JSON.parse(e) }
 
-		filtered = processed.select { |i| i['analysis'].any? and not @stoplist.include? i['analysis'][0]['lex'] }
+		filtered = processed.select { |i| i['analysis'].any? }
 
 		return filtered
 	end
@@ -43,8 +55,12 @@ private
 			},
 		}
 
+		stats['text'].select! {
+			|word| not @filter.include? word
+		}
+
 		stats.each {
-			|key, value| Metric.create({ :text => @text, :key => key, :value => value, :group => STEP_GROUP })
+			|key, value| Metric.create({ :text => @text, :key => key, :value => value.to_json, :group => STEP_GROUP })
 		}
 	end
 end
