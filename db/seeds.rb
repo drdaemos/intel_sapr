@@ -5,3 +5,6 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+User.create(username: 'Daemos', name: 'daemos', password: 'huihui')
+Text.create(name: 'Example Text #1', description: 'Blablabla', deleted: false, path: 'files/text1.txt', type: 'txt')

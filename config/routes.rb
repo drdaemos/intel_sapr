@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  match '*path', to: 'auth#cors', via: [:options]
+
   get '/' => 'lemma#result'
 
   post '/' => 'lemma#result'
@@ -9,6 +11,9 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'lemma#result'
 
+  post 'upload' => 'upload#upload'
+  get 'auth' => 'auth#token'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
@@ -16,7 +21,8 @@ Rails.application.routes.draw do
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
+  resources :users, defaults: {format: :json}
+  resources :texts, defaults: {format: :json}
 
   # Example resource route with options:
   #   resources :products do
