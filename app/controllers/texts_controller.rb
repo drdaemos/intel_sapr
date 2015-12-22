@@ -1,7 +1,8 @@
 class TextsController < ApplicationController
 	# GET /texts/
 	def index
-		text = Text.all
+		text = Text.order(created_at: :desc)
+		# render json: text, except: [:metrics]
 		render json: text
 	end
 

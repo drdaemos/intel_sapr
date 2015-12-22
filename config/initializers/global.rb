@@ -4,7 +4,8 @@ class CustomLogger < Logger
   end
 end
 
-logfile = File.open(Rails.root.join('log/custom.log'), 'a')  # create log file
+filename = 'custom_' + Date.current.to_s(:db) + '.log'
+logfile = File.open(Rails.root.join('log', filename), 'a')  # create log file
 logfile.sync = true  # automatically flushes data to file
 
 IntelSapr.setLogger(CustomLogger.new(logfile))
