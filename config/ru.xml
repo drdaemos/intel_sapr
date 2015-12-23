@@ -1,0 +1,532 @@
+<?xml version="1.0"?>
+<dictionary lang="russian">
+ <stemmer>
+
+    <step1_pre>
+	  <rule>"|</rule>
+	  <rule>(|</rule>
+	  <rule>'|</rule>
+	  <rule>[|</rule>
+	  <rule>{|</rule>
+	 </step1_pre>
+
+
+    <step1_post>
+      <rule>."|</rule>
+	  <rule>,"|</rule>
+	  <rule>,'|</rule>
+	  <rule>.|</rule>
+	  <rule>..|</rule>
+	  <rule>...|</rule>
+	  <rule>,|</rule>
+	  <rule>"|</rule>
+	  <rule>")|</rule>
+	  <rule>"?|</rule>
+	  <rule>)|</rule>
+	  <rule>?|</rule>
+	  <rule>:|</rule>
+	  <rule>;|</rule>
+	  <rule>!|</rule>
+	  <rule>-|</rule>
+	  <rule>--|</rule>
+	  <rule>]|</rule>
+	  <rule>}|</rule>
+	 </step1_post>
+
+
+    <manual>
+	  <rule>wrote|write</rule>
+	  <rule>came|come</rule>
+	  <rule>went|go</rule>
+	 </manual>
+
+    <post>
+       <rule>before1|1after</rule>
+    </post>
+   <pre>
+       <rule>before1|1after</rule>
+   </pre>
+  </stemmer>
+   <parser>
+
+ 	 <linebreak>
+	  <rule>."</rule>
+	  <rule>?"</rule>
+	  <rule>!"</rule>
+	  <rule>,"</rule>
+	  <rule>.</rule>
+	  <rule>?</rule>
+	  <rule>;</rule>
+	  <rule>|</rule>
+	  <rule>!</rule>
+	 </linebreak>
+
+ 	 <linedontbreak>
+	  <rule>Dr.</rule>
+	  <rule>Mr.</rule>
+	  <rule>Mrs.</rule>
+	  <rule>U.S.</rule>
+	  <rule>Rep.</rule>
+	  <rule>Sen.</rule>
+	 </linedontbreak>
+   </parser>
+ <grader-tc>
+<word>а</word>
+<word>можно</word>
+<word>этот</word>
+<word>этом</word>
+<word>этой</word>
+<word>этого</word>
+<word>который</word>
+<word>которая</word>
+<word>которые</word>
+<word>которых</word>
+<word>без</word>
+<word>бытовать</word>
+<word>быть</word>
+<word>в</word>
+<word>вещь</word>
+<word>вниз</word>
+<word>внизу</word>
+<word>во</word>
+<word>все</word>
+<word>всегда</word>
+<word>всё</word>
+<word>где</word>
+<word>да</word>
+<word>даже</word>
+<word>два</word>
+<word>две</word>
+<word>для</word>
+<word>должен</word>
+<word>друго</word>
+<word>его</word>
+<word>её</word>
+<word>ей</word>
+<word>ему</word>
+<word>если</word>
+<word>же</word>
+<word>за</word>
+<word>и</word>
+<word>из</word>
+<word>из-за</word>
+<word>или</word>
+<word>им</word>
+<word>к</word>
+<word>каждый</word>
+<word>как</word>
+<word>меня</word>
+<word>мне</word>
+<word>мной</word>
+<word>может</word>
+<word>на</word>
+<word>наверх</word>
+<word>наверху</word>
+<word>над</word>
+<word>не</word>
+<word>ней</word>
+<word>нет</word>
+<word>нём</word>
+<word>нигде</word>
+<word>никто</word>
+<word>ноль</word>
+<word>о</word>
+<word>оба</word>
+<word>обе</word>
+<word>одна</word>
+<word>одно</word>
+<word>около</word>
+<word>он</word>
+<word>она</word>
+<word>оно</word>
+<word>от</word>
+<word>по</word>
+<word>пока</word>
+<word>поперёк</word>
+<word>после</word>
+<word>потом</word>
+<word>почему</word>
+<word>при</word>
+<word>с</word>
+<word>скоро</word>
+<word>сначала</word>
+<word>так</word>
+<word>также</word>
+<word>тебе</word>
+<word>тебя</word>
+<word>теперь</word>
+<word>тобой</word>
+<word>тогда</word>
+<word>тоже</word>
+<word>только</word>
+<word>ты</word>
+<word>у</word>
+<word>уже</word>
+<word>что</word>
+<word>чтобы</word>
+<word>это</word>
+<word>я</word>
+
+<word>а</word>
+<word>без</word>
+<word>более</word>
+<word>будем</word>
+<word>будет</word>
+<word>будете</word>
+<word>будешь</word>
+<word>буду</word>
+<word>будут</word>
+<word>бы</word>
+<word>был</word>
+<word>была</word>
+<word>были</word>
+<word>было</word>
+<word>быть</word>
+<word>в</word>
+<word>вам</word>
+<word>вас</word>
+<word>весь</word>
+<word>во</word>
+<word>вот</word>
+<word>все</word>
+<word>всего</word>
+<word>всех</word>
+<word>вы</word>
+<word>где</word>
+<word>да</word>
+<word>даже</word>
+<word>для</word>
+<word>до</word>
+<word>его</word>
+<word>ее</word>
+<word>если</word>
+<word>есть</word>
+<word>еще</word>
+<word>же</word>
+<word>за</word>
+<word>здесь</word>
+<word>и</word>
+<word>из</word>
+<word>или</word>
+<word>им</word>
+<word>их</word>
+<word>к</word>
+<word>как</word>
+<word>ко</word>
+<word>когда</word>
+<word>кто</word>
+<word>ли</word>
+<word>либо</word>
+<word>мне</word>
+<word>может</word>
+<word>мы</word>
+<word>на</word>
+<word>надо</word>
+<word>наш</word>
+<word>не</word>
+<word>него</word>
+<word>нее</word>
+<word>нет</word>
+<word>ни</word>
+<word>них</word>
+<word>но</word>
+<word>ну</word>
+<word>о</word>
+<word>об</word>
+<word>однако</word>
+<word>он</word>
+<word>она</word>
+<word>они</word>
+<word>оно</word>
+<word>от</word>
+<word>очень</word>
+<word>по</word>
+<word>под</word>
+<word>при</word>
+<word>с</word>
+<word>со</word>
+<word>так</word>
+<word>такая</word>
+<word>также</word>
+<word>такие</word>
+<word>таким</word>
+<word>такими</word>
+<word>таких</word>
+<word>такого</word>
+<word>такое</word>
+<word>такой</word>
+<word>таком</word>
+<word>такому</word>
+<word>такою</word>
+<word>такую</word>
+<word>там</word>
+<word>те</word>
+<word>тем</word>
+<word>тема</word>
+<word>темам</word>
+<word>темами</word>
+<word>темах</word>
+<word>теме</word>
+<word>темой</word>
+<word>темою</word>
+<word>тему</word>
+<word>темы</word>
+<word>то</word>
+<word>того</word>
+<word>тоже</word>
+<word>той</word>
+<word>только</word>
+<word>том</word>
+<word>ты</word>
+<word>у</word>
+<word>уж</word>
+<word>уже</word>
+<word>хотя</word>
+<word>чего</word>
+<word>чей</word>
+<word>чем</word>
+<word>что</word>
+<word>чтобы</word>
+<word>чье</word>
+<word>чья</word>
+<word>эта</word>
+<word>эти</word>
+<word>это</word>
+<word>я</word>
+<word>в</word>
+<word>во</word>
+<word>и</word>
+<word>не</word>
+<word>на</word>
+<word>я</word>
+<word>меня</word>
+<word>мне</word>
+<word>мной</word>
+<word>мною</word>
+<word>быть</word>
+<word>есть</word>
+<word>буду</word>
+<word>будешь</word>
+<word>будет</word>
+<word>будем</word>
+<word>будут</word>
+<word>был</word>
+<word>было</word>
+<word>были</word>
+<word>была</word>
+<word>будь</word>
+<word>будьте</word>
+<word>что</word>
+<word>чего</word>
+<word>чему</word>
+<word>чем</word>
+<word>чём</word>
+<word>он</word>
+<word>его</word>
+<word>него</word>
+<word>ему</word>
+<word>нему</word>
+<word>им</word>
+<word>ним</word>
+<word>нем</word>
+<word>нём</word>
+<word>оно</word>
+<word>она</word>
+<word>ее</word>
+<word>её</word>
+<word>нее</word>
+<word>неё</word>
+<word>ей</word>
+<word>ней</word>
+<word>ею</word>
+<word>нею</word>
+<word>они</word>
+<word>их</word>
+<word>них</word>
+<word>ими</word>
+<word>ними</word>
+<word>с</word>
+<word>а</word>
+<word>как</word>
+<word>этот</word>
+<word>этого</word>
+<word>этому</word>
+<word>этим</word>
+<word>этом</word>
+<word>это</word>
+<word>эта</word>
+<word>этой</word>
+<word>эту</word>
+<word>эти</word>
+<word>этих</word>
+<word>этими</word>
+<word>вы</word>
+<word>вас</word>
+<word>вам</word>
+<word>вами</word>
+<word>ты</word>
+<word>тебя</word>
+<word>тебе</word>
+<word>тобой</word>
+<word>тобою</word>
+<word>к</word>
+<word>ко</word>
+<word>мы</word>
+<word>нас</word>
+<word>нам</word>
+<word>нами</word>
+<word>но</word>
+<word>по</word>
+<word>весь</word>
+<word>всего</word>
+<word>всему</word>
+<word>всем</word>
+<word>все</word>
+<word>всё</word>
+<word>вся</word>
+<word>всей</word>
+<word>всю</word>
+<word>всею</word>
+<word>всех</word>
+<word>всеми</word>
+<word>за</word>
+<word>тот</word>
+<word>того</word>
+<word>тому</word>
+<word>то</word>
+<word>та</word>
+<word>той</word>
+<word>ту</word>
+<word>те</word>
+<word>тех</word>
+<word>теми</word>
+<word>тем</word>
+<word>том</word>
+<word>у</word>
+<word>из</word>
+<word>свой</word>
+<word>своего</word>
+<word>своему</word>
+<word>своим</word>
+<word>своем</word>
+<word>своём</word>
+<word>свое</word>
+<word>своё</word>
+<word>своя</word>
+<word>своей</word>
+<word>свою</word>
+<word>своею</word>
+<word>свои</word>
+<word>своих</word>
+<word>своими</word>
+<word>так</word>
+<word>о</word>
+<word>об</word>
+<word>же</word>
+<word>который</word>
+<word>которого</word>
+<word>которому</word>
+<word>которым</word>
+<word>котором</word>
+<word>которое</word>
+<word>которая</word>
+<word>которой</word>
+<word>которую</word>
+<word>которою</word>
+<word>которые</word>
+<word>которых</word>
+<word>которыми</word>
+<word>бы</word>
+<word>от</word>
+<word>мочь</word>
+<word>могу</word>
+<word>можешь</word>
+<word>может</word>
+<word>можем</word>
+<word>можете</word>
+<word>могут</word>
+<word>мог</word>
+<word>могла</word>
+<word>могло</word>
+<word>могли</word>
+<word>моги</word>
+<word>могите</word>
+<word>один</word>
+<word>одного</word>
+<word>одному</word>
+<word>одним</word>
+<word>одном</word>
+<word>одно</word>
+<word>одна</word>
+<word>одной</word>
+<word>одну</word>
+<word>одною</word>
+<word>одни</word>
+<word>одних</word>
+<word>одними</word>
+<word>для</word>
+<word>такой</word>
+<word>такого</word>
+<word>такому</word>
+<word>таким</word>
+<word>таком</word>
+<word>такое</word>
+<word>такая</word>
+<word>такую</word>
+<word>такою</word>
+<word>такие</word>
+<word>таких</word>
+<word>такими</word>
+<word>вот</word>
+<word>только</word>
+<word>еще</word>
+<word>ещё</word>
+<word>наш</word>
+<word>нашего</word>
+<word>нашему</word>
+<word>нашем</word>
+<word>наше</word>
+<word>наша</word>
+<word>нашей</word>
+<word>нашу</word>
+<word>нашею</word>
+<word>наши</word>
+<word>наших</word>
+<word>нашими</word>
+<word>нашим</word>
+<word>да</word>
+<word>сам</word>
+<word>себя</word>
+<word>себе</word>
+<word>собой</word>
+<word>собою</word>
+<word>нет</word>
+<word>до</word>
+<word>при</word>
+<word>уже</word>
+<word>или</word>
+<word>если</word>
+<word>мой</word>
+<word>моего</word>
+<word>моему</word>
+<word>моим</word>
+<word>моем</word>
+<word>моём</word>
+<word>мое</word>
+<word>моё</word>
+<word>моя</word>
+<word>моей</word>
+<word>мою</word>
+<word>моею</word>
+<word>мои</word>
+<word>моих</word>
+<word>моими</word>
+<word>чтобы</word>
+<word>кто</word>
+<word>кого</word>
+<word>кому</word>
+<word>кем</word>
+<word>ком</word>
+<word>когда</word>
+ </grader-tc>
+</dictionary>

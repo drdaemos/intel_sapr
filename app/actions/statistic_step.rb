@@ -31,7 +31,7 @@ class StatisticStep < AnalysisStep
 		stats.each {|stat, values| stats[stat] = values.sort_by{|k,v| v}.reverse.to_h}
 
 		stats.each {
-			|key, value| Metric.create({ :text => @text, :key => key, :value => value, :group => STEP_GROUP })
+			|key, value| Metric.create({ :text => @text, :key => key, :value => value.to_json, :group => STEP_GROUP })
 		}
 	end
 

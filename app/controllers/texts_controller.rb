@@ -17,8 +17,7 @@ class TextsController < ApplicationController
 	def analyze
 		id = params[:id]
 		text = Text.find(id)
-		analyzer = TextAnalyzer.new
-		analyzer.analyze(text)
+		text.analyze
 		render json: {:result => 'success'}
 	end
 
@@ -33,6 +32,7 @@ class TextsController < ApplicationController
 		text['path'] = uploader.file
 
 		Text.create(text)
+		text.analyze
 
 		render json: {:result => 'success'}
 	end
